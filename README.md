@@ -4,10 +4,12 @@ Personal academic website for Kaveh Mousavand — plain HTML/CSS, no build step 
 
 ## Updating an already-deployed site
 
-If you already published an earlier version of this site, just overwrite the files in your
-existing repo with the ones in this folder (same filenames, same structure — `index.html`,
-`research.html`, `misc.html`, `fdb-applet.html`, `css/style.css`). No need to delete or recreate
-the repo. See "Replace the files" below.
+If you already published an earlier version of this site, overwrite the files in your existing
+repo with the ones in this folder. This version adds `assets/images/profile.jpg` and eight PDFs
+under `assets/docs/` — your CV, research statement, extended abstracts, and posters — so **every
+file that used to live on Wix now lives in this repo**, and the site no longer points to
+`wixsite.com` or `filesusr.com` anywhere except two external conference websites you don't own.
+See "Replace the files" below.
 
 ## Deploy on GitHub Pages (free)
 
@@ -34,19 +36,30 @@ the repo. See "Replace the files" below.
 
 ### Replace the files (updating an existing repo)
 
-- **Web UI:** open your repo, click into each file (`index.html`, `research.html`, `misc.html`,
-  `fdb-applet.html`, `css/style.css`), click the pencil ("Edit this file") icon, select all
-  existing content and delete it, then paste in the new content from this folder. Commit each
-  change. GitHub Pages will redeploy automatically within a minute or two.
-- **Or, drag-and-drop:** on the repo's main page, drag the updated files from this folder onto the
-  file list — GitHub will detect the matching filenames and offer to replace them. Commit.
-- **Or, command line**, from inside your existing local clone of the repo:
+This update adds two new folders (`assets/images/`, `assets/docs/`) alongside the existing pages,
+so the easiest and most reliable approach is uploading everything at once:
+
+- **Drag-and-drop (recommended for this update):** open your repo on GitHub, click **Add file →
+  Upload files**, then drag in the *entire contents* of this folder — `index.html`,
+  `research.html`, `misc.html`, `fdb-applet.html`, `css/style.css`, `README.md`, and the two new
+  folders `assets/images/` and `assets/docs/` with everything inside them. GitHub will detect the
+  files with matching names and overwrite them, and add the new ones. Scroll down and click
+  **Commit changes**.
+- **Command line**, from inside your existing local clone of the repo:
   ```
-  # copy the new files from this folder over your local repo, then:
+  # copy all files from this folder into your local repo folder (overwriting), then:
   git add .
-  git commit -m "Redesign: smaller top-left photo, Enomoto-style sidebar"
+  git commit -m "Move all assets off Wix; new profile photo; redesigned sidebar"
   git push
   ```
+
+### What's new in this update
+- `assets/images/profile.jpg` — your new photo, cropped square and sized to fit the sidebar.
+- `assets/docs/` — eight PDFs that used to be hosted on Wix (CV, research statement, two extended
+  abstracts, a research note, and three posters). All links across the site now point here instead
+  of `wixsite.com`/`filesusr.com`.
+- The FDB Applet page's "README" link now points to the `FDB-Applet` GitHub repository instead of
+  a Wix-hosted text file.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
