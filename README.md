@@ -49,15 +49,19 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- Nav tabs (Home, Research & Events, Miscellaneous, FDB Applet, Brick Lodge) now navigate within
-  the site in the same tab, instead of opening a new one. Only links that leave the site (arXiv,
-  journals, GitHub, PDFs, etc.) still open in a new tab.
+- Checked the nav tabs (Home, Research & Events, Miscellaneous, FDB Applet, Brick Lodge) and the
+  site logo: none of them carry `target="_blank"` in this package, so they should navigate within
+  the same tab. If your live site still opens some of them in a new tab, it's very likely a
+  **browser cache** issue — try a hard refresh (Ctrl/Cmd+Shift+R) or an incognito window before
+  re-uploading. If it persists after that, let me know which specific tab still misbehaves.
 - The subtitle under "Research & Events" now reads "Representation Theory of Algebras, τ-tilting
   Theory, Cluster Algebras, Algebraic Combinatorics, and Topological Data Analysis".
-- Brick Lodge now has a clickable list — A. Open Conjectures, B. Open Questions, C. New Results,
-  D. Observations — each opening a pop-up. The pop-ups currently show "Content coming soon."; to
-  fill them in later, edit the `brickLodgeContent` object near the bottom of `brick-lodge.html`
-  (each entry's `body` field accepts plain HTML).
+- Brick Lodge's "A. Open Conjectures" pop-up is now filled in: seven open conjectures on bricks,
+  listed in chronological order of first appearance (by arXiv/thesis date), each with its setting,
+  precise statement, arXiv & journal links, and its own "More information" pop-up with background,
+  history, current state of the art, and connections to the other conjectures. B, C, and D still
+  show "Content coming soon." — edit `brickLodgeContent` (topic level) and `conjectureDetails`
+  (per-conjecture level) near the bottom of `brick-lodge.html` to fill those in later.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
