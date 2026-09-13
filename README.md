@@ -49,19 +49,19 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- Checked the nav tabs (Home, Research & Events, Miscellaneous, FDB Applet, Brick Lodge) and the
-  site logo: none of them carry `target="_blank"` in this package, so they should navigate within
-  the same tab. If your live site still opens some of them in a new tab, it's very likely a
-  **browser cache** issue — try a hard refresh (Ctrl/Cmd+Shift+R) or an incognito window before
-  re-uploading. If it persists after that, let me know which specific tab still misbehaves.
-- The subtitle under "Research & Events" now reads "Representation Theory of Algebras, τ-tilting
-  Theory, Cluster Algebras, Algebraic Combinatorics, and Topological Data Analysis".
-- Brick Lodge's "A. Open Conjectures" pop-up is now filled in: seven open conjectures on bricks,
-  listed in chronological order of first appearance (by arXiv/thesis date), each with its setting,
-  precise statement, arXiv & journal links, and its own "More information" pop-up with background,
-  history, current state of the art, and connections to the other conjectures. B, C, and D still
-  show "Content coming soon." — edit `brickLodgeContent` (topic level) and `conjectureDetails`
-  (per-conjecture level) near the bottom of `brick-lodge.html` to fill those in later.
+- "A. Open Conjectures" on Brick Lodge is now its own page, **`open-conjectures.html`**, opened in
+  a new tab when you click that item (all other nav tabs still stay in the same tab, as before).
+- Each of the seven conjectures now sits in its own bordered card, with its statement in **bold**.
+- "More information" is now an inline drop-down that expands directly under each conjecture's
+  card (click again, or click another entry, to collapse it) instead of a separate pop-up window.
+- Each drop-down now also lists the conjecture's **related topics**, each linking to a relevant
+  paper (τ-tilting theory, semibricks, torsion classes, g-vector fans, etc.), alongside the
+  existing background / current state / connections summary.
+- The 2nd bBT Conjecture's "More information" text has been updated to the wording you provided.
+- B, C, and D on the Brick Lodge page still show "Content coming soon." — edit `brickLodgeContent`
+  near the bottom of `brick-lodge.html` to fill those in later. To add an eighth conjecture (or
+  edit an existing one) later, copy a `<div class="conjecture-card">...</div>` block in
+  `open-conjectures.html` and edit its text, meta line, statement, and info panel.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
@@ -73,11 +73,13 @@ See "Replace the files" below.
 ## Structure
 
 ```
-index.html        Home — bio, research interests, contact
-research.html      Research & Events — publications, posters, conference organizing
-misc.html          Miscellaneous — broader interests, expository reading
-fdb-applet.html    FDB Applet — about, install instructions, license
-css/style.css      Shared stylesheet
+index.html            Home — bio, research interests, contact
+research.html          Research & Events — publications, posters, conference organizing
+misc.html              Miscellaneous — broader interests, expository reading
+fdb-applet.html        FDB Applet — about, install instructions, license
+brick-lodge.html       Brick Lodge — intro, A/B/C/D topic list, brick-trajectory
+open-conjectures.html  Open Conjectures — full list, opened from Brick Lodge in a new tab
+css/style.css          Shared stylesheet
 ```
 
 ## Notes

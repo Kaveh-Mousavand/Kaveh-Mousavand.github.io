@@ -46,7 +46,7 @@
     <p>This page is devoted to recent developments in the study of bricks in representation theory of algebras and related areas. It aims to serve as a growing repository of important results and developments from recent years, as well as a space for sharing new results, posing open problems and questions, and exchanging ideas. The hope is that it will provide a useful resource for researchers working on bricks and related topics, and help foster further developments and connections within the subject.</p>
 
     <ul class="brick-list">
-      <li><button type="button" class="brick-item" data-modal="conjectures">A. Open Conjectures</button></li>
+      <li><a class="brick-item" href="open-conjectures.html" target="_blank" rel="noopener noreferrer">A. Open Conjectures</a></li>
       <li><button type="button" class="brick-item" data-modal="questions">B. Open Questions</button></li>
       <li><button type="button" class="brick-item" data-modal="results">C. New Results</button></li>
       <li><button type="button" class="brick-item" data-modal="observations">D. Observations</button></li>
@@ -72,14 +72,6 @@
   </div>
 </div>
 
-<div class="modal-overlay-2" id="modal-overlay-2">
-  <div class="modal-box">
-    <button type="button" class="modal-close" id="modal-close-2" aria-label="Close">&times;</button>
-    <h3 id="modal-title-2"></h3>
-    <div id="modal-body-2" class="detail-body"></div>
-  </div>
-</div>
-
 <footer class="site-footer">
   © 2026 Kaveh Mousavand. Built with plain HTML &amp; CSS, hosted on GitHub Pages.
 </footer>
@@ -89,134 +81,10 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
   document.getElementById('topnav-inner').classList.toggle('open');
 });
 
-/* ---------- Level-2 detail popups ("More information") ---------- */
-const conjectureDetails = {
-  gvectors: {
-    title: "More information — g-vector(s) Conjecture",
-    body: `<p>First raised as an open question by Laurent Demonet in his 2017 Habilitation thesis, in the context of the τ-tilting fan — the fan formed in R<sup>n</sup> by the g-vector cones of the basic support τ-tilting modules of an algebra. The question ties brick-infiniteness to a geometric "gap" in this fan.</p>
-    <p><strong>Current state:</strong> open in general. Calvin Pfeifer (2023) gave a τ-reduced reformulation in terms of Geiss–Leclerc–Schröer's generically τ-reduced components, and proved it equivalent to the Stability Conjecture for the class of E-tame algebras introduced by Asai–Iyama.</p>
-    <p><strong>Connections:</strong> part of the unifying brick-Brauer-Thrall (bBT) framework; equivalent to the Stability Conjecture for E-tame algebras, and to all bBT conjectures for tame algebras in general.</p>
-    <p class="detail-links"><a href="https://www.math.nagoya-u.ac.jp/~demonet/recherche/habilitation.pdf" target="_blank" rel="noopener noreferrer">Demonet's Habilitation (PDF)</a><a href="https://arxiv.org/abs/2308.09576" target="_blank" rel="noopener noreferrer">Pfeifer, arXiv:2308.09576</a><a href="https://arxiv.org/abs/2508.11789" target="_blank" rel="noopener noreferrer">Survey, arXiv:2508.11789</a></p>`
-  },
-  bBT2: {
-    title: "More information — Second brick-Brauer-Thrall (2nd bBT) Conjecture",
-    body: `<p>Posed by Kaveh Mousavand in the final stage of his Ph.D. studies (Chapter 6 of his 2020 thesis; first circulated in the arXiv preprint "τ-tilting finiteness of non-distributive algebras and their module varieties," October 2019), as the brick-theoretic analogue of the classical Second Brauer–Thrall Conjecture — a cornerstone of representation theory proved in the 1980s. The same statement was independently posed the same year by Schroll–Treffinger–Valdivieso under the name "Second τ-Brauer-Thrall Conjecture."</p>
-    <p><strong>Current state:</strong> verified for several families — non-distributive minimal representation-infinite algebras, biserial algebras, and any algebra with a generalized standard component (hence tame algebras, under a standard reduction) — but open in general.</p>
-    <p><strong>Connections:</strong> the central conjecture of the bBT family; it implies the Rigid-bricks and Semibrick conjectures, and reduces to the case of minimal brick-infinite algebras with almost all bricks faithful.</p>
-    <p class="detail-links"><a href="https://arxiv.org/abs/1910.02251" target="_blank" rel="noopener noreferrer">Mousavand, arXiv:1910.02251</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869322003027" target="_blank" rel="noopener noreferrer">J. Algebra 608 (2022)</a><a href="https://arxiv.org/abs/1911.09021" target="_blank" rel="noopener noreferrer">Schroll–Treffinger–Valdivieso, arXiv:1911.09021</a></p>`
-  },
-  rigidbricks: {
-    title: "More information — Rigid-bricks Conjecture",
-    body: `<p>Posed alongside the 2nd bBT Conjecture in Mousavand's 2019–2020 work (Conjecture 6.0.1 of the Ph.D. thesis). A geometric argument shows that an affirmative resolution of the 2nd bBT Conjecture would also settle this one.</p>
-    <p><strong>Current state:</strong> open in general; verified in the same special cases as the 2nd bBT Conjecture.</p>
-    <p><strong>Connections:</strong> a consequence of the 2nd bBT Conjecture; both sit inside the wider bBT family unified through Hom-orthogonal modules.</p>
-    <p class="detail-links"><a href="https://arxiv.org/abs/1910.02251" target="_blank" rel="noopener noreferrer">Mousavand, arXiv:1910.02251</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869322003027" target="_blank" rel="noopener noreferrer">J. Algebra 608 (2022)</a></p>`
-  },
-  semibrick: {
-    title: "More information — Semibrick Conjecture",
-    body: `<p>First conjectured by Haruhisa Enomoto in "Monobrick, a uniform approach to torsion-free classes and wide subcategories" (May 2020), building on the classical bijection between semibricks and wide subcategories in a length abelian category.</p>
-    <p><strong>Current state:</strong> open in general; known to hold for biserial algebras and for any algebra with a generalized standard component, hence for tame algebras under the standard reduction.</p>
-    <p><strong>Connections:</strong> shown to follow from the 2nd bBT Conjecture (Mousavand–Paquette, 2024); equivalent to the other bBT conjectures for tame algebras.</p>
-    <p class="detail-links"><a href="https://arxiv.org/abs/2005.01626" target="_blank" rel="noopener noreferrer">Enomoto, arXiv:2005.01626</a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0001870821005521" target="_blank" rel="noopener noreferrer">Adv. Math. 393 (2021)</a><a href="https://arxiv.org/abs/2407.20877" target="_blank" rel="noopener noreferrer">Mousavand–Paquette, arXiv:2407.20877</a></p>`
-  },
-  genericbrick: {
-    title: "More information — Generic-brick Conjecture",
-    body: `<p>Originally formulated by Mousavand–Paquette in "Biserial algebras and generic bricks" (September 2022), extending Crawley-Boevey's classical theory of generic modules for tame algebras to the brick setting. Later studied by Bautista–Pérez–Salmerón in the context of infinite-dimensional bricks over tame algebras (August 2024, still a preprint).</p>
-    <p><strong>Current state:</strong> open in general; verified for biserial algebras.</p>
-    <p><strong>Connections:</strong> equivalent to the other bBT conjectures for tame algebras; for a tame algebra, all bBT conjectures hold if and only if it admits a homogeneous brick.</p>
-    <p class="detail-links"><a href="https://arxiv.org/abs/2209.05696" target="_blank" rel="noopener noreferrer">Mousavand–Paquette, arXiv:2209.05696</a><a href="https://link.springer.com/article/10.1007/s00209-025-03756-0" target="_blank" rel="noopener noreferrer">Math. Z. 310 (2025)</a><a href="https://arxiv.org/abs/2408.16127" target="_blank" rel="noopener noreferrer">Bautista–Pérez–Salmerón, arXiv:2408.16127</a></p>`
-  },
-  stability: {
-    title: "More information — Stability Conjecture",
-    body: `<p>Traces back to a 2012–2013 conjecture of Chindris–Kinser–Weyman on the "dense orbit property" and Schur-representation-finiteness, combined with a related 2019 conjecture of Mousavand. The combined statement, phrased in terms of King's stability condition, was formulated by Calvin Pfeifer (August 2023), who also connected it to a geometric reformulation of the g-vectors Conjecture.</p>
-    <p><strong>Current state:</strong> open in general. Pfeifer proves this conjecture implies a τ-reduced version of the g-vectors Conjecture, and the converse for E-tame algebras (Asai–Iyama).</p>
-    <p><strong>Connections:</strong> part of the unifying bBT framework; equivalent to the other bBT conjectures for tame algebras.</p>
-    <p class="detail-links"><a href="https://arxiv.org/abs/1201.6422" target="_blank" rel="noopener noreferrer">Chindris–Kinser–Weyman, arXiv:1201.6422</a><a href="https://academic.oup.com/imrn/article-abstract/2015/3/631/650718" target="_blank" rel="noopener noreferrer">IMRN 2015</a><a href="https://arxiv.org/abs/1910.02251" target="_blank" rel="noopener noreferrer">Mousavand, arXiv:1910.02251</a><a href="https://arxiv.org/abs/2308.09576" target="_blank" rel="noopener noreferrer">Pfeifer, arXiv:2308.09576</a></p>`
-  },
-  homorthogonal: {
-    title: "More information — Hom-orthogonal Conjecture",
-    body: `<p>Introduced by Mousavand–Paquette in "Hom-orthogonal modules and brick-Brauer-Thrall conjectures" (July 2024), as an elementary, purely module-theoretic reformulation designed to unify the entire bBT family into a single statement.</p>
-    <p><strong>Current state:</strong> the implications (1) ⇒ (2) ⇒ (3) are proved in general; the reverse implications are open in general but known to hold for tame algebras, where all three conditions become equivalent.</p>
-    <p><strong>Connections:</strong> the main technical tool behind the proof that the g-vectors, 2nd bBT, Semibrick, Generic-brick, and Stability conjectures all become equivalent for tame algebras.</p>
-    <p class="detail-links"><a href="https://arxiv.org/abs/2407.20877" target="_blank" rel="noopener noreferrer">Mousavand–Paquette, arXiv:2407.20877</a></p>`
-  }
-};
-
-const modalOverlay2 = document.getElementById('modal-overlay-2');
-const modalTitle2 = document.getElementById('modal-title-2');
-const modalBody2 = document.getElementById('modal-body-2');
-
-function closeBrickModal2() {
-  modalOverlay2.classList.remove('open');
-}
-document.getElementById('modal-close-2').addEventListener('click', closeBrickModal2);
-modalOverlay2.addEventListener('click', function(e) {
-  if (e.target === modalOverlay2) closeBrickModal2();
-});
-
-/* ---------- Level-1 topic popups (A/B/C/D list) ---------- */
+// Brick Lodge popups for B/C/D. "A. Open Conjectures" is now its own page
+// (open-conjectures.html). To add content later, just edit the "body"
+// string for the relevant key below.
 const brickLodgeContent = {
-  conjectures: {
-    title: "A. Open Conjectures",
-    wide: true,
-    body: `<p class="conjectures-intro">Throughout, <em>k</em> is an algebraically closed field and <em>A = kQ/I</em> is a basic, connected, finite-dimensional associative <em>k</em>-algebra. An <em>A</em>-module <em>M</em> is a <strong>brick</strong> if End<sub>A</sub>(M) is a division algebra (equivalently, End<sub>A</sub>(M) ≅ <em>k</em>); <em>A</em> is <strong>brick-infinite</strong> if it has infinitely many isomorphism classes of bricks — equivalently (Demonet–Iyama–Jasso), if it is τ-tilting infinite. The conjectures below are listed in the chronological order of their first appearance in the literature (by arXiv date, or thesis date where no arXiv preprint exists), and are — to the best of current knowledge — still open in general.</p>
-
-    <div class="conjecture-entry">
-      <h4>1. g-vector(s) Conjecture</h4>
-      <p class="conjecture-meta">L. Demonet — Habilitation thesis: 2017 (no arXiv preprint) &nbsp;·&nbsp; <a href="https://www.math.nagoya-u.ac.jp/~demonet/recherche/habilitation.pdf" target="_blank" rel="noopener noreferrer">Thesis PDF</a></p>
-      <p class="conjecture-setting"><strong>Setting:</strong> the τ-tilting fan of <em>A</em> is the fan in R<sup>n</sup> formed by the g-vector cones of the basic support τ-tilting <em>A</em>-modules.</p>
-      <p class="conjecture-statement"><em>A</em> is brick-infinite if and only if there exists a rational ray in R<sup>n</sup> lying outside every cone of the τ-tilting fan of <em>A</em>.</p>
-      <button type="button" class="info-btn" data-detail="gvectors">More information</button>
-    </div>
-
-    <div class="conjecture-entry">
-      <h4>2. Second brick-Brauer-Thrall (2nd bBT) Conjecture</h4>
-      <p class="conjecture-meta">K. Mousavand — arXiv: 2019 & Journal: 2022 &nbsp;·&nbsp; <a href="https://arxiv.org/abs/1910.02251" target="_blank" rel="noopener noreferrer">arXiv:1910.02251</a> &nbsp;·&nbsp; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869322003027" target="_blank" rel="noopener noreferrer">J. Algebra</a></p>
-      <p class="conjecture-setting"><strong>Setting:</strong> a finite-dimensional algebra <em>A</em> which is brick-infinite.</p>
-      <p class="conjecture-statement">If <em>A</em> is brick-infinite, there exists at least one positive integer <em>d</em> such that <em>A</em> admits infinitely many pairwise non-isomorphic bricks of length (k-dimension) <em>d</em>.</p>
-      <button type="button" class="info-btn" data-detail="bBT2">More information</button>
-    </div>
-
-    <div class="conjecture-entry">
-      <h4>3. Rigid-bricks Conjecture</h4>
-      <p class="conjecture-meta">K. Mousavand — arXiv: 2019 & Journal: 2022 &nbsp;·&nbsp; <a href="https://arxiv.org/abs/1910.02251" target="_blank" rel="noopener noreferrer">arXiv:1910.02251</a> &nbsp;·&nbsp; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869322003027" target="_blank" rel="noopener noreferrer">J. Algebra</a></p>
-      <p class="conjecture-setting"><strong>Setting:</strong> a brick <em>X</em> is rigid if Ext<sup>1</sup><sub>A</sub>(X, X) = 0.</p>
-      <p class="conjecture-statement">If every brick of <em>A</em> is a rigid module, then <em>A</em> is τ-tilting finite.</p>
-      <button type="button" class="info-btn" data-detail="rigidbricks">More information</button>
-    </div>
-
-    <div class="conjecture-entry">
-      <h4>4. Semibrick Conjecture</h4>
-      <p class="conjecture-meta">H. Enomoto — arXiv: 2020 & Journal: 2021 &nbsp;·&nbsp; <a href="https://arxiv.org/abs/2005.01626" target="_blank" rel="noopener noreferrer">arXiv:2005.01626</a> &nbsp;·&nbsp; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0001870821005521" target="_blank" rel="noopener noreferrer">Adv. Math.</a></p>
-      <p class="conjecture-setting"><strong>Setting:</strong> a semibrick is a set of bricks that is pairwise Hom-orthogonal, i.e. Hom(X, Y) = Hom(Y, X) = 0 for any two distinct members X, Y.</p>
-      <p class="conjecture-statement"><em>A</em> is brick-infinite if and only if <em>A</em> admits an infinite semibrick.</p>
-      <button type="button" class="info-btn" data-detail="semibrick">More information</button>
-    </div>
-
-    <div class="conjecture-entry">
-      <h4>5. Generic-brick Conjecture</h4>
-      <p class="conjecture-meta">K. Mousavand, C. Paquette — arXiv: 2022 & Journal: 2025 &nbsp;·&nbsp; <a href="https://arxiv.org/abs/2209.05696" target="_blank" rel="noopener noreferrer">arXiv:2209.05696</a> &nbsp;·&nbsp; <a href="https://link.springer.com/article/10.1007/s00209-025-03756-0" target="_blank" rel="noopener noreferrer">Math. Z.</a></p>
-      <p class="conjecture-setting"><strong>Setting:</strong> an indecomposable <em>A</em>-module <em>G</em> is generic if it has infinite <em>k</em>-dimension but finite length over End<sub>A</sub>(G) (finite endolength); <em>G</em> is a generic brick if, in addition, End<sub>A</sub>(G) is a division ring.</p>
-      <p class="conjecture-statement"><em>A</em> is brick-infinite if and only if <em>A</em> admits a generic brick.</p>
-      <button type="button" class="info-btn" data-detail="genericbrick">More information</button>
-    </div>
-
-    <div class="conjecture-entry">
-      <h4>6. Stability Conjecture</h4>
-      <p class="conjecture-meta">C. Chindris, R. Kinser, J. Weyman (2012/13) &amp; K. Mousavand (2019), formalized by C. Pfeifer — arXiv: 2023 & Journal: 2025 &nbsp;·&nbsp; <a href="https://arxiv.org/abs/1201.6422" target="_blank" rel="noopener noreferrer">arXiv:1201.6422</a> &nbsp;·&nbsp; <a href="https://arxiv.org/abs/2308.09576" target="_blank" rel="noopener noreferrer">arXiv:2308.09576</a></p>
-      <p class="conjecture-setting"><strong>Setting:</strong> for θ ∈ K<sub>0</sub>(proj A), a module is θ-stable in the sense of King's stability condition with respect to θ.</p>
-      <p class="conjecture-statement"><em>A</em> is brick-infinite if and only if, for some θ ∈ K<sub>0</sub>(proj A), there are infinitely many pairwise non-isomorphic θ-stable modules of the same dimension vector.</p>
-      <button type="button" class="info-btn" data-detail="stability">More information</button>
-    </div>
-
-    <div class="conjecture-entry">
-      <h4>7. Hom-orthogonal Conjecture</h4>
-      <p class="conjecture-meta">K. Mousavand, C. Paquette — arXiv: 2024 & Journal: 2026 (to appear) &nbsp;·&nbsp; <a href="https://arxiv.org/abs/2407.20877" target="_blank" rel="noopener noreferrer">arXiv:2407.20877</a></p>
-      <p class="conjecture-setting"><strong>Setting:</strong> a family {X<sub>i</sub>} of modules is pairwise Hom-orthogonal if Hom(X<sub>i</sub>, X<sub>j</sub>) = Hom(X<sub>j</sub>, X<sub>i</sub>) = 0 for all i ≠ j; <em>A</em> has rank <em>n</em> (its number of simple modules).</p>
-      <p class="conjecture-statement">For an algebra <em>A</em> of rank <em>n</em>, the following are equivalent: (1) mod <em>A</em> contains an infinite family of pairwise Hom-orthogonal modules of the same dimension; (2) mod <em>A</em> contains <em>n</em> + 1 pairwise Hom-orthogonal bricks; (3) <em>A</em> is brick-infinite. (The implications (1) ⇒ (2) ⇒ (3) are known; the converses are open in general.)</p>
-      <button type="button" class="info-btn" data-detail="homorthogonal">More information</button>
-    </div>`
-  },
   questions: {
     title: "B. Open Questions",
     body: "<p>Content coming soon.</p>"
@@ -232,31 +100,17 @@ const brickLodgeContent = {
 };
 
 const modalOverlay = document.getElementById('modal-overlay');
-const modalBox = document.getElementById('modal-box');
 const modalTitle = document.getElementById('modal-title');
 const modalBody = document.getElementById('modal-body');
 
-document.querySelectorAll('.brick-item').forEach(function(btn) {
+document.querySelectorAll('.brick-item[data-modal]').forEach(function(btn) {
   btn.addEventListener('click', function() {
     const key = btn.getAttribute('data-modal');
     const entry = brickLodgeContent[key];
     if (!entry) return;
     modalTitle.textContent = entry.title;
     modalBody.innerHTML = entry.body;
-    modalBox.classList.toggle('wide', !!entry.wide);
     modalOverlay.classList.add('open');
-
-    // Wire up any "More information" buttons just inserted into modalBody
-    modalBody.querySelectorAll('.info-btn').forEach(function(infoBtn) {
-      infoBtn.addEventListener('click', function() {
-        const dKey = infoBtn.getAttribute('data-detail');
-        const dEntry = conjectureDetails[dKey];
-        if (!dEntry) return;
-        modalTitle2.textContent = dEntry.title;
-        modalBody2.innerHTML = dEntry.body;
-        modalOverlay2.classList.add('open');
-      });
-    });
   });
 });
 
@@ -268,10 +122,7 @@ modalOverlay.addEventListener('click', function(e) {
   if (e.target === modalOverlay) closeBrickModal();
 });
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeBrickModal2();
-    closeBrickModal();
-  }
+  if (e.key === 'Escape') closeBrickModal();
 });
 </script>
 </body>
