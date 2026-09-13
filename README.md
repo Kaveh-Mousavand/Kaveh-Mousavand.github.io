@@ -36,30 +36,32 @@ See "Replace the files" below.
 
 ### Replace the files (updating an existing repo)
 
-This update adds two new folders (`assets/images/`, `assets/docs/`) alongside the existing pages,
-so the easiest and most reliable approach is uploading everything at once:
+The easiest and most reliable approach is uploading everything at once, since this update adds a
+new page (`brick-lodge.html`):
 
-- **Drag-and-drop (recommended for this update):** open your repo on GitHub, click **Add file →
-  Upload files**, then drag in the *entire contents* of this folder — `index.html`,
-  `research.html`, `misc.html`, `fdb-applet.html`, `css/style.css`, `README.md`, and the two new
-  folders `assets/images/` and `assets/docs/` with everything inside them. GitHub will detect the
-  files with matching names and overwrite them, and add the new ones. Scroll down and click
-  **Commit changes**.
+- **Drag-and-drop (recommended):** open your repo on GitHub, click **Add file → Upload files**,
+  then drag in the *entire contents* of this folder — all five `.html` files, `css/style.css`,
+  `README.md`, and (if you haven't already) the `assets/` folder. GitHub will detect files with
+  matching names and overwrite them, and add the new `brick-lodge.html` page. Scroll down and
+  click **Commit changes**.
 - **Command line**, from inside your existing local clone of the repo:
   ```
   # copy all files from this folder into your local repo folder (overwriting), then:
   git add .
-  git commit -m "Move all assets off Wix; new profile photo; redesigned sidebar"
+  git commit -m "Light blue background, cleaner text wrapping, links open in new tabs, new Brick Lodge page"
   git push
   ```
 
 ### What's new in this update
-- `assets/images/profile.jpg` — your new photo, cropped square and sized to fit the sidebar.
-- `assets/docs/` — eight PDFs that used to be hosted on Wix (CV, research statement, two extended
-  abstracts, a research note, and three posters). All links across the site now point here instead
-  of `wixsite.com`/`filesusr.com`.
-- The FDB Applet page's "README" link now points to the `FDB-Applet` GitHub repository instead of
-  a Wix-hosted text file.
+- Background is now a very light blue across every page.
+- Typography cleanup: headings use balanced line-breaks and body text uses
+  browser-native "pretty" wrapping so lines don't break awkwardly; nothing is
+  justified/stretched.
+- Every link on the site now opens in a new tab (`target="_blank"`).
+- New fifth nav tab, **Brick Lodge** (`brick-lodge.html`), with an "Introduction:" blurb, a
+  divider, and a "My brick-trajectory:" section — the three paragraphs that used to sit at the
+  top of the Research & Events page. Those paragraphs were removed from `research.html`, which
+  now goes straight from the page title into "Preprints & publications".
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set

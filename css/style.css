@@ -1,21 +1,21 @@
 /* ------------------------------------------------------------------
    Kaveh Mousavand — academic site
-   Palette:  paper #F7F5F0 | ink #202325 | slate #34495D | brick #A65A43
+   Palette:  paper (light blue) #EAF2FA | ink #202325 | slate #34495D | brick #A65A43
    Type:     "Source Serif 4" (display) + "IBM Plex Sans" (body/UI)
    ------------------------------------------------------------------ */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --paper: #F7F5F0;
-  --paper-raised: #FFFFFF;
+  --paper: #EAF2FA;
+  --paper-raised: #F6FAFE;
   --ink: #202325;
   --ink-soft: #565B5F;
   --slate: #34495D;
   --slate-deep: #223140;
   --brick: #A65A43;
-  --rule: #DAD5C8;
-  --rule-soft: #E9E5D9;
+  --rule: #C9D9E8;
+  --rule-soft: #DCE8F3;
   --max-w: 760px;
 }
 
@@ -31,6 +31,19 @@ body {
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Clean, non-stretched text wrapping: balance headings, avoid ragged/orphan
+   line breaks in body copy, and never justify (justify is what stretches
+   text unnecessarily). */
+p, li, .lede, .quote-block, .coauthors, .ev-meta, blockquote {
+  text-wrap: pretty;
+  text-align: left;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+h1, h2, h3, h4, .subtitle, .ev-title {
+  text-wrap: balance;
 }
 
 a {
@@ -231,6 +244,19 @@ h1, h2, h3, h4 {
   color: var(--ink-soft);
   font-size: 1.02rem;
   line-height: 1.7;
+}
+
+.section-label {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 34px 0;
 }
 
 .card {
