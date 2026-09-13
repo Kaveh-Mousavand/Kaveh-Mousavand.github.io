@@ -36,32 +36,28 @@ See "Replace the files" below.
 
 ### Replace the files (updating an existing repo)
 
-The easiest and most reliable approach is uploading everything at once, since this update adds a
-new page (`brick-lodge.html`):
-
 - **Drag-and-drop (recommended):** open your repo on GitHub, click **Add file → Upload files**,
   then drag in the *entire contents* of this folder — all five `.html` files, `css/style.css`,
-  `README.md`, and (if you haven't already) the `assets/` folder. GitHub will detect files with
-  matching names and overwrite them, and add the new `brick-lodge.html` page. Scroll down and
-  click **Commit changes**.
+  `README.md`, and the `assets/` folder. GitHub will overwrite files with matching names. Scroll
+  down and click **Commit changes**.
 - **Command line**, from inside your existing local clone of the repo:
   ```
   # copy all files from this folder into your local repo folder (overwriting), then:
   git add .
-  git commit -m "Light blue background, cleaner text wrapping, links open in new tabs, new Brick Lodge page"
+  git commit -m "Nav tabs stay in same tab, updated Research subtitle, Brick Lodge popups"
   git push
   ```
 
 ### What's new in this update
-- Background is now a very light blue across every page.
-- Typography cleanup: headings use balanced line-breaks and body text uses
-  browser-native "pretty" wrapping so lines don't break awkwardly; nothing is
-  justified/stretched.
-- Every link on the site now opens in a new tab (`target="_blank"`).
-- New fifth nav tab, **Brick Lodge** (`brick-lodge.html`), with an "Introduction:" blurb, a
-  divider, and a "My brick-trajectory:" section — the three paragraphs that used to sit at the
-  top of the Research & Events page. Those paragraphs were removed from `research.html`, which
-  now goes straight from the page title into "Preprints & publications".
+- Nav tabs (Home, Research & Events, Miscellaneous, FDB Applet, Brick Lodge) now navigate within
+  the site in the same tab, instead of opening a new one. Only links that leave the site (arXiv,
+  journals, GitHub, PDFs, etc.) still open in a new tab.
+- The subtitle under "Research & Events" now reads "Representation Theory of Algebras, τ-tilting
+  Theory, Cluster Algebras, Algebraic Combinatorics, and Topological Data Analysis".
+- Brick Lodge now has a clickable list — A. Open Conjectures, B. Open Questions, C. New Results,
+  D. Observations — each opening a pop-up. The pop-ups currently show "Content coming soon."; to
+  fill them in later, edit the `brickLodgeContent` object near the bottom of `brick-lodge.html`
+  (each entry's `body` field accepts plain HTML).
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set

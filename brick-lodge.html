@@ -11,14 +11,14 @@
 
 <nav class="topnav">
   <div class="topnav-inner" id="topnav-inner">
-    <a class="brand" href="index.html" target="_blank" rel="noopener noreferrer">Kaveh Mousavand</a>
+    <a class="brand" href="index.html">Kaveh Mousavand</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">Menu</button>
     <ul class="navlinks">
-      <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
-      <li><a href="research.html" target="_blank" rel="noopener noreferrer">Research &amp; Events</a></li>
-      <li><a href="misc.html" target="_blank" rel="noopener noreferrer">Miscellaneous</a></li>
-      <li><a href="fdb-applet.html" target="_blank" rel="noopener noreferrer">FDB Applet</a></li>
-      <li><a href="brick-lodge.html" class="active" target="_blank" rel="noopener noreferrer">Brick Lodge</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research &amp; Events</a></li>
+      <li><a href="misc.html">Miscellaneous</a></li>
+      <li><a href="fdb-applet.html">FDB Applet</a></li>
+      <li><a href="brick-lodge.html" class="active">Brick Lodge</a></li>
     </ul>
   </div>
 </nav>
@@ -45,6 +45,13 @@
     <p class="section-label">Introduction:</p>
     <p>This page is devoted to recent developments in the study of bricks in representation theory of algebras and related areas. It aims to serve as a growing repository of important results and developments from recent years, as well as a space for sharing new results, posing open problems and questions, and exchanging ideas. The hope is that it will provide a useful resource for researchers working on bricks and related topics, and help foster further developments and connections within the subject.</p>
 
+    <ul class="brick-list">
+      <li><button type="button" class="brick-item" data-modal="conjectures">A. Open Conjectures</button></li>
+      <li><button type="button" class="brick-item" data-modal="questions">B. Open Questions</button></li>
+      <li><button type="button" class="brick-item" data-modal="results">C. New Results</button></li>
+      <li><button type="button" class="brick-item" data-modal="observations">D. Observations</button></li>
+    </ul>
+
     <hr class="divider">
 
     <p class="section-label">My brick-trajectory:</p>
@@ -57,6 +64,14 @@
   </main>
 </div>
 
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <h3 id="modal-title"></h3>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
 <footer class="site-footer">
   © 2026 Kaveh Mousavand. Built with plain HTML &amp; CSS, hosted on GitHub Pages.
 </footer>
@@ -64,6 +79,53 @@
 <script>
 document.getElementById('nav-toggle').addEventListener('click', function() {
   document.getElementById('topnav-inner').classList.toggle('open');
+});
+
+// Brick Lodge popups. To add content later, just edit the "body" string
+// for the relevant key below — no other changes needed.
+const brickLodgeContent = {
+  conjectures: {
+    title: "A. Open Conjectures",
+    body: "<p>Content coming soon.</p>"
+  },
+  questions: {
+    title: "B. Open Questions",
+    body: "<p>Content coming soon.</p>"
+  },
+  results: {
+    title: "C. New Results",
+    body: "<p>Content coming soon.</p>"
+  },
+  observations: {
+    title: "D. Observations",
+    body: "<p>Content coming soon.</p>"
+  }
+};
+
+const modalOverlay = document.getElementById('modal-overlay');
+const modalTitle = document.getElementById('modal-title');
+const modalBody = document.getElementById('modal-body');
+
+document.querySelectorAll('.brick-item').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const key = btn.getAttribute('data-modal');
+    const entry = brickLodgeContent[key];
+    if (!entry) return;
+    modalTitle.textContent = entry.title;
+    modalBody.innerHTML = entry.body;
+    modalOverlay.classList.add('open');
+  });
+});
+
+function closeBrickModal() {
+  modalOverlay.classList.remove('open');
+}
+document.getElementById('modal-close').addEventListener('click', closeBrickModal);
+modalOverlay.addEventListener('click', function(e) {
+  if (e.target === modalOverlay) closeBrickModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeBrickModal();
 });
 </script>
 </body>
