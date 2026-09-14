@@ -49,15 +49,19 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-Formatting and small wording fixes across **Open Conjectures** (`open-conjectures.html`) and
-**Open Questions** (`open-questions.html`):
-- The Hom-orthogonal Conjecture's statement now breaks conditions (1), (2), and (3) onto three
-  separate lines within its box, followed by the parenthetical remark ("...are trivial; the
-  converses are open in general.") on its own line.
-- The No-gap phenomenon question now reads "if <em>A</em> admits a brick of dimension <em>d</em> >
-  1" instead of just "dimension <em>d</em>" — ruling out the trivial edge case at dimension 1.
-- The Rigid semibricks question now breaks "With the same setting and notation as above," onto
-  its own line, with parts (1) and (2) each on their own line below it.
+Changes to the **Open Conjectures** page (`open-conjectures.html`):
+- **Generic-brick Conjecture:** now opens with the foundational connection, due to Francesco
+  Sentieri (arXiv:2011.09253, 2020), between brick-infiniteness and the existence of an
+  infinite-dimensional brick — the result that makes searching for a generic brick a natural
+  strategy in the first place. Tightened the following paragraph to avoid repeating that point. A
+  new "Infinite dimensional bricks" related-topic link points to Sentieri's paper, and "Infinite
+  τ-tilting theory (Schlegel)" is now just "Infinite τ-tilting theory".
+- **Stability Conjecture:** the related-topic link "E-tame algebras (Mousavand–Paquette)" is now
+  labeled "Interactions of bricks and τ-rigidity" (matching that paper's actual title).
+- **Hom-orthogonal Conjecture:** confirmed this is the intended target for the "(1)/(2)/(3) on
+  separate lines" formatting — the lead-in "the following are equivalent:" is on its own line,
+  followed by (1), (2), and (3) each on their own line, and the closing remark reads "...are
+  known; the converses are open in general."
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
