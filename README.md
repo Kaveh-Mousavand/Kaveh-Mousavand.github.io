@@ -49,17 +49,15 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-Small wording and formatting fixes on the **Open Conjectures** page (`open-conjectures.html`):
-- The page's intro paragraph no longer attributes the brick-infinite/τ-tilting-infinite
-  equivalence to "(Demonet–Iyama–Jasso)" — it now just states the equivalence.
-- The g-vectors Conjecture's "τ-convergence (Mousavand–Paquette)" related-topic link is now
-  simply labeled "τ-convergence".
-- The Rigid-bricks Conjecture's statement now concludes "...then <em>A</em> is brick-finite"
-  instead of "τ-tilting finite" (the two notions are equivalent, but brick-finite is the more
-  natural phrasing in this context).
-- The Hom-orthogonal Conjecture's statement is now broken across three lines within its box:
-  condition (1), then conditions (2)+(3), then the parenthetical remark about which implications
-  are known.
+Formatting and small wording fixes across **Open Conjectures** (`open-conjectures.html`) and
+**Open Questions** (`open-questions.html`):
+- The Hom-orthogonal Conjecture's statement now breaks conditions (1), (2), and (3) onto three
+  separate lines within its box, followed by the parenthetical remark ("...are trivial; the
+  converses are open in general.") on its own line.
+- The No-gap phenomenon question now reads "if <em>A</em> admits a brick of dimension <em>d</em> >
+  1" instead of just "dimension <em>d</em>" — ruling out the trivial edge case at dimension 1.
+- The Rigid semibricks question now breaks "With the same setting and notation as above," onto
+  its own line, with parts (1) and (2) each on their own line below it.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
