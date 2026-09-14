@@ -49,19 +49,16 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- Open Questions now has an explicit, bolded "Setting:" paragraph at the top, matching the
-  format used on the Open Conjectures page.
-- Removed "Demonet's Question" and the "Rigid Bricks Question" — both are now discussed as
-  conjectures (on the Open Conjectures page) rather than as open questions here.
-- Added two new open questions, communicated to Kaveh directly and not yet on arXiv:
-  - **No-gap phenomenon for bricks** (K. Mousavand, 2026) — whether a representation-finite
-    algebra with a brick of dimension *d* must also have one of dimension *d* − 1.
-  - **Rigid semibricks** (K. Mousavand, C. Paquette, 2026) — whether an infinite semibrick of
-    rigid bricks can exist at all, and if so, whether the algebra must be strictly wild.
-- Each of the three remaining questions keeps its inline "More information" drop-down with
-  background, recent developments, and related topics — including a genuinely relevant 2026
-  Mousavand–Paquette result bearing on the Rigid Semibricks question, and the classical Bongartz
-  "no-gap" theorem for indecomposables that motivates the No-gap question.
+- **Open Conjectures** (`open-conjectures.html`): under the 2nd bBT Conjecture's "More
+  information," the link previously labeled "Schroll–Treffinger–Valdivieso" is now labeled
+  "Band and τ-tilting finiteness."
+- **Open Questions** (`open-questions.html`): the two parts of the "Rigid semibricks" question now
+  appear on separate lines within the same card, instead of running together in one sentence.
+- **Research & Events** (`research.html`): the subtitle no longer lists "τ-tilting Theory"
+  separately — it now reads "Representation Theory of Algebras, Cluster Algebras, Algebraic
+  Combinatorics, and Topological Data Analysis."
+- **Miscellaneous** (`misc.html`): the opening paragraph now reads "Representation theory" instead
+  of "Representation theory of algebras," and no longer mentions Graph Neural Networks.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
