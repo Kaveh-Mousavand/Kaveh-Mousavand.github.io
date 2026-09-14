@@ -49,16 +49,17 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- **Open Conjectures** (`open-conjectures.html`): under the 2nd bBT Conjecture's "More
-  information," the link previously labeled "Schroll–Treffinger–Valdivieso" is now labeled
-  "Band and τ-tilting finiteness."
-- **Open Questions** (`open-questions.html`): the two parts of the "Rigid semibricks" question now
-  appear on separate lines within the same card, instead of running together in one sentence.
-- **Research & Events** (`research.html`): the subtitle no longer lists "τ-tilting Theory"
-  separately — it now reads "Representation Theory of Algebras, Cluster Algebras, Algebraic
-  Combinatorics, and Topological Data Analysis."
-- **Miscellaneous** (`misc.html`): the opening paragraph now reads "Representation theory" instead
-  of "Representation theory of algebras," and no longer mentions Graph Neural Networks.
+All three cards on the **Open Questions** page (`open-questions.html`) now open with "With the
+same setting and notation as above," before the question itself:
+- **Tameness question:** also dropped the "(and with classical tameness)" clause, so it now reads
+  "...all coincide with one another for arbitrary finite-dimensional algebras?"
+- **No-gap phenomenon for bricks:** the "More information" drop-down is fully rewritten per your
+  text — it now notes the question is openly shared as of September 2026 (with partial results and
+  an affirmative answer for several families of algebras already known), clarifies that it's
+  related to but fundamentally different from Bongartz's classical theorem, and adds that
+  brick-finite algebras with gaps in brick dimension do exist, and that basicness of the algebra is
+  a necessary assumption.
+- **Rigid semibricks:** unchanged apart from the new opening phrase.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
