@@ -49,17 +49,17 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-All three cards on the **Open Questions** page (`open-questions.html`) now open with "With the
-same setting and notation as above," before the question itself:
-- **Tameness question:** also dropped the "(and with classical tameness)" clause, so it now reads
-  "...all coincide with one another for arbitrary finite-dimensional algebras?"
-- **No-gap phenomenon for bricks:** the "More information" drop-down is fully rewritten per your
-  text — it now notes the question is openly shared as of September 2026 (with partial results and
-  an affirmative answer for several families of algebras already known), clarifies that it's
-  related to but fundamentally different from Bongartz's classical theorem, and adds that
-  brick-finite algebras with gaps in brick dimension do exist, and that basicness of the algebra is
-  a necessary assumption.
-- **Rigid semibricks:** unchanged apart from the new opening phrase.
+Small wording and formatting fixes on the **Open Conjectures** page (`open-conjectures.html`):
+- The page's intro paragraph no longer attributes the brick-infinite/τ-tilting-infinite
+  equivalence to "(Demonet–Iyama–Jasso)" — it now just states the equivalence.
+- The g-vectors Conjecture's "τ-convergence (Mousavand–Paquette)" related-topic link is now
+  simply labeled "τ-convergence".
+- The Rigid-bricks Conjecture's statement now concludes "...then <em>A</em> is brick-finite"
+  instead of "τ-tilting finite" (the two notions are equivalent, but brick-finite is the more
+  natural phrasing in this context).
+- The Hom-orthogonal Conjecture's statement is now broken across three lines within its box:
+  condition (1), then conditions (2)+(3), then the parenthetical remark about which implications
+  are known.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
