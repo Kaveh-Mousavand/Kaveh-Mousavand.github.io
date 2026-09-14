@@ -49,19 +49,19 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- "A. Open Conjectures" on Brick Lodge is now its own page, **`open-conjectures.html`**, opened in
-  a new tab when you click that item (all other nav tabs still stay in the same tab, as before).
-- Each of the seven conjectures now sits in its own bordered card, with its statement in **bold**.
-- "More information" is now an inline drop-down that expands directly under each conjecture's
-  card (click again, or click another entry, to collapse it) instead of a separate pop-up window.
-- Each drop-down now also lists the conjecture's **related topics**, each linking to a relevant
-  paper (τ-tilting theory, semibricks, torsion classes, g-vector fans, etc.), alongside the
-  existing background / current state / connections summary.
-- The 2nd bBT Conjecture's "More information" text has been updated to the wording you provided.
-- B, C, and D on the Brick Lodge page still show "Content coming soon." — edit `brickLodgeContent`
-  near the bottom of `brick-lodge.html` to fill those in later. To add an eighth conjecture (or
-  edit an existing one) later, copy a `<div class="conjecture-card">...</div>` block in
-  `open-conjectures.html` and edit its text, meta line, statement, and info panel.
+- Open Questions now has an explicit, bolded "Setting:" paragraph at the top, matching the
+  format used on the Open Conjectures page.
+- Removed "Demonet's Question" and the "Rigid Bricks Question" — both are now discussed as
+  conjectures (on the Open Conjectures page) rather than as open questions here.
+- Added two new open questions, communicated to Kaveh directly and not yet on arXiv:
+  - **No-gap phenomenon for bricks** (K. Mousavand, 2026) — whether a representation-finite
+    algebra with a brick of dimension *d* must also have one of dimension *d* − 1.
+  - **Rigid semibricks** (K. Mousavand, C. Paquette, 2026) — whether an infinite semibrick of
+    rigid bricks can exist at all, and if so, whether the algebra must be strictly wild.
+- Each of the three remaining questions keeps its inline "More information" drop-down with
+  background, recent developments, and related topics — including a genuinely relevant 2026
+  Mousavand–Paquette result bearing on the Rigid Semibricks question, and the classical Bongartz
+  "no-gap" theorem for indecomposables that motivates the No-gap question.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
@@ -79,6 +79,7 @@ misc.html              Miscellaneous — broader interests, expository reading
 fdb-applet.html        FDB Applet — about, install instructions, license
 brick-lodge.html       Brick Lodge — intro, A/B/C/D topic list, brick-trajectory
 open-conjectures.html  Open Conjectures — full list, opened from Brick Lodge in a new tab
+open-questions.html    Open Questions — full list + MathOverflow links, opened from Brick Lodge in a new tab
 css/style.css          Shared stylesheet
 ```
 

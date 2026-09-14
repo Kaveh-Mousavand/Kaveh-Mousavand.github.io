@@ -47,7 +47,7 @@
 
     <ul class="brick-list">
       <li><a class="brick-item" href="open-conjectures.html" target="_blank" rel="noopener noreferrer">A. Open Conjectures</a></li>
-      <li><button type="button" class="brick-item" data-modal="questions">B. Open Questions</button></li>
+      <li><a class="brick-item" href="open-questions.html" target="_blank" rel="noopener noreferrer">B. Open Questions</a></li>
       <li><button type="button" class="brick-item" data-modal="results">C. New Results</button></li>
       <li><button type="button" class="brick-item" data-modal="observations">D. Observations</button></li>
     </ul>
@@ -81,14 +81,10 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
   document.getElementById('topnav-inner').classList.toggle('open');
 });
 
-// Brick Lodge popups for B/C/D. "A. Open Conjectures" is now its own page
-// (open-conjectures.html). To add content later, just edit the "body"
-// string for the relevant key below.
+// Brick Lodge popups for C/D. "A. Open Conjectures" and "B. Open Questions"
+// are now their own pages (open-conjectures.html, open-questions.html). To
+// add content later, just edit the "body" string for the relevant key below.
 const brickLodgeContent = {
-  questions: {
-    title: "B. Open Questions",
-    body: "<p>Content coming soon.</p>"
-  },
   results: {
     title: "C. New Results",
     body: "<p>Content coming soon.</p>"
