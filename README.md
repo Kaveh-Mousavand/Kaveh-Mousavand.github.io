@@ -49,19 +49,26 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-Changes to the **Open Conjectures** page (`open-conjectures.html`):
-- **Generic-brick Conjecture:** now opens with the foundational connection, due to Francesco
-  Sentieri (arXiv:2011.09253, 2020), between brick-infiniteness and the existence of an
-  infinite-dimensional brick — the result that makes searching for a generic brick a natural
-  strategy in the first place. Tightened the following paragraph to avoid repeating that point. A
-  new "Infinite dimensional bricks" related-topic link points to Sentieri's paper, and "Infinite
-  τ-tilting theory (Schlegel)" is now just "Infinite τ-tilting theory".
-- **Stability Conjecture:** the related-topic link "E-tame algebras (Mousavand–Paquette)" is now
-  labeled "Interactions of bricks and τ-rigidity" (matching that paper's actual title).
-- **Hom-orthogonal Conjecture:** confirmed this is the intended target for the "(1)/(2)/(3) on
-  separate lines" formatting — the lead-in "the following are equivalent:" is on its own line,
-  followed by (1), (2), and (3) each on their own line, and the closing remark reads "...are
-  known; the converses are open in general."
+- **Home page** (`index.html`): removed the redundant "Kaveh Mousavand / Mathematics —
+  Representation Theory" heading from the main content area, since your name and role already
+  appear in the sidebar on every page. The page now opens directly with the bio paragraph.
+- **Open Conjectures** (`open-conjectures.html`) — all changes driven by a major new paper,
+  "A Proof of the Second brick-Brauer–Thrall Conjecture for E-infinite algebras" (Mousavand–
+  Paquette, arXiv:2609.31417, September 2026):
+  - **2nd bBT Conjecture:** fixed the "Current state" phrasing (removed the stray "hence tame
+    algebras,"), and added a paragraph on the new paper — it proves the conjecture for every
+    E-infinite algebra, which (combined with Demonet's Conjecture) essentially reduces the whole
+    2nd bBT Conjecture to that single open conjecture.
+  - **Stability Conjecture:** added a paragraph noting this is exactly the "Stable Second
+    brick-Brauer–Thrall Conjecture" proved by the same paper for every non-g-tame algebra, with
+    Demonet's Conjecture shown to imply it in full generality as a second route to a complete proof.
+  - **Generic-brick Conjecture:** added a line noting the new paper shows every E-infinite algebra
+    is brick-continuous, confirming existence of a generic brick for E-infinite tame algebras.
+  - **New card 8, "Abelian length category and (locally) brick-finite Conjecture"** — based on
+    Question 6.6 of Francesco Sentieri's "Wide subcategories and brick-finiteness for length
+    categories" (arXiv:2607.15991, July 2026), with its own "More information" drop-down
+    summarizing the paper's main (global) theorem, the open local/pointwise question, and
+    connections to related work.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
