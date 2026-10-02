@@ -143,8 +143,15 @@ h1, h2, h3, h4 {
 .sidebar .role {
   font-size: 0.88rem;
   color: var(--ink-soft);
+  margin: 0 0 2px;
+  line-height: 1.4;
+}
+.sidebar .field {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
   margin: 0 0 14px;
   line-height: 1.4;
+  font-style: italic;
 }
 .sidebar .loc {
   font-size: 0.82rem;

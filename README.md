@@ -49,12 +49,17 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- **Home page** (`index.html`): removed the redundant "Kaveh Mousavand / Mathematics —
-  Representation Theory" heading from the main content area, since your name and role already
-  appear in the sidebar on every page. The page now opens directly with the bio paragraph.
-- **Open Conjectures** (`open-conjectures.html`) — all changes driven by a major new paper,
-  "A Proof of the Second brick-Brauer–Thrall Conjecture for E-infinite algebras" (Mousavand–
-  Paquette, arXiv:2609.31417, September 2026):
+- **Sidebar** (every page): added "Mathematician" under your name and "Staff Scientist", in a
+  small italicized line, before the location/institution lines. A new `.field` CSS class controls
+  its styling; the `.role` ("Staff Scientist") line's bottom spacing was tightened to sit closer to
+  it, keeping the overall sidebar rhythm consistent with before.
+- **Open Conjectures** (`open-conjectures.html`): trimmed the "Connections" line for conjecture 8
+  ("Abelian length category and (locally) brick-finite Conjecture") — it now ends after the
+  Asai–Pfeifer/Demonet–Iyama–Jasso sentence, with the Nasr-Isfahani aside removed.
+
+Earlier update, still included — driven by a major new paper, "A Proof of the Second
+brick-Brauer–Thrall Conjecture for E-infinite algebras" (Mousavand–Paquette, arXiv:2609.31417,
+September 2026):
   - **2nd bBT Conjecture:** fixed the "Current state" phrasing (removed the stray "hence tame
     algebras,"), and added a paragraph on the new paper — it proves the conjecture for every
     E-infinite algebra, which (combined with Demonet's Conjecture) essentially reduces the whole
