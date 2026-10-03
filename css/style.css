@@ -140,19 +140,17 @@ h1, h2, h3, h4 {
   font-size: 1.15rem;
   margin: 0 0 3px;
 }
-.sidebar .role {
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  margin: 0 0 2px;
-  line-height: 1.4;
-}
+/* "Staff Scientist" and "Mathematician" share identical typography;
+   only the bottom margin differs so the pair reads as one block. */
+.sidebar .role,
 .sidebar .field {
   font-size: 0.88rem;
+  font-style: normal;
   color: var(--ink-soft);
-  margin: 0 0 14px;
   line-height: 1.4;
-  font-style: italic;
 }
+.sidebar .role { margin: 0 0 2px; }
+.sidebar .field { margin: 0 0 14px; }
 .sidebar .loc {
   font-size: 0.82rem;
   color: var(--ink-soft);
