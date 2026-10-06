@@ -49,16 +49,12 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- **Sidebar** (every page):
-  - "Mathematician" now sits *above* "Staff Scientist"; both use the same normal (non-italic)
-    font, size, and color.
-  - The two affiliation lines are merged into one: an institute icon followed by
-    "OIST, Okinawa, Japan", linked to https://www.oist.jp/ (opens in a new tab).
-- **Research & Events** (`research.html`):
-  - Added your new preprint, "A Proof of the Second brick-Brauer-Thrall Conjecture for E-infinite
-    algebras" (arXiv:2609.31417, with C. Paquette), as item 1 under Preprints & publications; the
-    list numbers itself automatically, so all other items shifted down by one.
-  - "Other writings" is now a bulleted list.
+- **Brick Lodge is now a separate repository** (https://github.com/Kaveh-Mousavand/brick-lodge,
+  published at https://kaveh-mousavand.github.io/brick-lodge/). The "Brick Lodge" tab of this
+  site now shows a link to it, followed by the "My brick-trajectory" paragraph.
+- `open-conjectures.html` and `open-questions.html` have moved to that repository and are
+  **no longer part of this site** — delete them from this repo (after the new repo is live).
+- `brick-lodge.html` was rewritten accordingly; its old pop-up script was removed.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
@@ -74,9 +70,7 @@ index.html            Home — bio, research interests, contact
 research.html          Research & Events — publications, posters, conference organizing
 misc.html              Miscellaneous — broader interests, expository reading
 fdb-applet.html        FDB Applet — about, install instructions, license
-brick-lodge.html       Brick Lodge — intro, A/B/C/D topic list, brick-trajectory
-open-conjectures.html  Open Conjectures — full list, opened from Brick Lodge in a new tab
-open-questions.html    Open Questions — full list + MathOverflow links, opened from Brick Lodge in a new tab
+brick-lodge.html       Brick Lodge — link to the separate Brick Lodge repository + "My brick-trajectory"
 css/style.css          Shared stylesheet
 ```
 

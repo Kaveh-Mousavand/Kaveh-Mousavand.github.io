@@ -40,36 +40,25 @@
 
   <main class="content">
     <h1>Brick Lodge</h1>
-    <p class="subtitle">A gathering place for recent developments on bricks</p>
+    <p class="subtitle">A repository for recent developments on bricks</p>
 
-    <p class="section-label">Introduction:</p>
-    <p>This page is devoted to recent developments in the study of bricks in representation theory of algebras and related areas. It aims to serve as a growing repository of important results and developments from recent years, as well as a space for sharing new results, posing open problems and questions, and exchanging ideas. The hope is that it will provide a useful resource for researchers working on bricks and related topics, and help foster further developments and connections within the subject.</p>
-
-    <ul class="brick-list">
-      <li><a class="brick-item" href="open-conjectures.html" target="_blank" rel="noopener noreferrer">A. Open Conjectures</a></li>
-      <li><a class="brick-item" href="open-questions.html" target="_blank" rel="noopener noreferrer">B. Open Questions</a></li>
-      <li><button type="button" class="brick-item" data-modal="results">C. New Results</button></li>
-      <li><button type="button" class="brick-item" data-modal="observations">D. Observations</button></li>
-    </ul>
+    <div class="card">
+      <p class="section-label">The Brick Lodge repository</p>
+      <p>Open conjectures, open questions, new results, and observations on bricks in representation theory of algebras are collected in a dedicated, openly maintained repository.</p>
+      <p>
+        <a class="btn" href="https://kaveh-mousavand.github.io/brick-lodge/" target="_blank" rel="noopener noreferrer">Open the Brick Lodge &rarr;</a>
+        <a class="btn" href="https://github.com/Kaveh-Mousavand/brick-lodge" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+      </p>
+    </div>
 
     <hr class="divider">
 
     <p class="section-label">My brick-trajectory:</p>
 
-    <p>In recent years, a major focus of my research has been to deepen our understanding of the behavior of <strong>bricks</strong> and related phenomena in the context of finite-dimensional algebras. For a finite-dimensional algebra <em>A</em> over an algebraically closed field <em>k</em>, a (left) <em>A</em>-module <em>M</em> is a brick if the endomorphism algebra of <em>M</em> is a skew field — that is, every non-zero <em>A</em>-homomorphism <em>f: M → M</em> is invertible. When <em>M</em> is finitely generated, this is equivalent to its endomorphism algebra being <em>k</em>, in which case bricks are also known as Schur representations. Bricks play a central role across stability conditions, wall-chamber structures, τ-tilting theory, the lattice theory of torsion classes, wide subcategories, and the spectrum of algebras. For a summary of recent progress on a series of modern problems on bricks, see <a href="https://arxiv.org/abs/2508.11789" target="_blank" rel="noopener noreferrer">this survey</a>.</p>
+    <p>In recent years, a major focus of my research has been to deepen our understanding of the behavior of <strong>bricks</strong> and related phenomena in the context of finite-dimensional algebras. Building on my doctoral work, and primarily motivated by two open conjectures that I first posed in my <a href="https://arxiv.org/abs/1910.02251" target="_blank" rel="noopener noreferrer">2019 preprint (Conjecture 6.6)</a>, I have carried out an extensive and systematic study of bricks. My stronger conjecture &mdash; now called the <strong>Second brick-Brauer-Thrall conjecture (2nd bBT)</strong> &mdash; concerns the distribution of bricks over algebras admitting infinitely many non-isomorphic bricks, and can be viewed as the modern analogue of the classical Second Brauer-Thrall conjecture (now a theorem). For remarks on the 2nd bBT and related problems, see Section 2 of <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869325004995" target="_blank" rel="noopener noreferrer">this paper</a>.</p>
 
-    <p>Building on my doctoral work, and primarily motivated by two open conjectures I first posed in my <a href="https://arxiv.org/abs/1910.02251" target="_blank" rel="noopener noreferrer">2019 preprint (Conjecture 6.6)</a>, I have carried out extensive work on a systematic study of bricks. My stronger conjecture — now called the <strong>Second brick-Brauer-Thrall conjecture (2nd bBT)</strong> — concerns the distribution of bricks over algebras admitting infinitely many non-isomorphic bricks, and can be viewed as the modern analogue of the classical Second Brauer-Thrall conjecture (now a theorem). For remarks on the 2nd bBT and related problems, see Section 2 of <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021869325004995" target="_blank" rel="noopener noreferrer">this paper</a>.</p>
-
-    <p>The 2nd bBT conjecture connects several classical and modern aspects of representation theory: the geometry of representation varieties, families of stable modules, components of Auslander–Reiten quivers, g-vector fans of algebras, and the behavior of infinite-dimensional (particularly generic) modules. It also relates to, and in some cases implies, other open conjectures in the field. We have settled it for some families of algebras, but as of Fall 2025 it remains open. For further details and future directions, see my <a href="assets/docs/research-statement.pdf" target="_blank" rel="noopener noreferrer">Research Statement</a>.</p>
+    <p>The 2nd bBT conjecture connects several classical and modern aspects of representation theory: the geometry of representation varieties, families of stable modules, components of Auslander&ndash;Reiten quivers, g-vector fans of algebras, and the behavior of infinite-dimensional (particularly generic) modules. It also relates to, and in some cases implies, other open conjectures in the field. We have settled it for some families of algebras, but as of Fall 2026 it remains open. For further details, several related problems, and future directions of research, see my <a href="research.html">recent work</a> and the <a href="https://kaveh-mousavand.github.io/brick-lodge/" target="_blank" rel="noopener noreferrer">Brick Lodge</a>, which hopefully serves as a useful repository for the study of bricks and related topics.</p>
   </main>
-</div>
-
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal-box" id="modal-box">
-    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-    <h3 id="modal-title"></h3>
-    <div id="modal-body"></div>
-  </div>
 </div>
 
 <footer class="site-footer">
@@ -79,46 +68,6 @@
 <script>
 document.getElementById('nav-toggle').addEventListener('click', function() {
   document.getElementById('topnav-inner').classList.toggle('open');
-});
-
-// Brick Lodge popups for C/D. "A. Open Conjectures" and "B. Open Questions"
-// are now their own pages (open-conjectures.html, open-questions.html). To
-// add content later, just edit the "body" string for the relevant key below.
-const brickLodgeContent = {
-  results: {
-    title: "C. New Results",
-    body: "<p>Content coming soon.</p>"
-  },
-  observations: {
-    title: "D. Observations",
-    body: "<p>Content coming soon.</p>"
-  }
-};
-
-const modalOverlay = document.getElementById('modal-overlay');
-const modalTitle = document.getElementById('modal-title');
-const modalBody = document.getElementById('modal-body');
-
-document.querySelectorAll('.brick-item[data-modal]').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    const key = btn.getAttribute('data-modal');
-    const entry = brickLodgeContent[key];
-    if (!entry) return;
-    modalTitle.textContent = entry.title;
-    modalBody.innerHTML = entry.body;
-    modalOverlay.classList.add('open');
-  });
-});
-
-function closeBrickModal() {
-  modalOverlay.classList.remove('open');
-}
-document.getElementById('modal-close').addEventListener('click', closeBrickModal);
-modalOverlay.addEventListener('click', function(e) {
-  if (e.target === modalOverlay) closeBrickModal();
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeBrickModal();
 });
 </script>
 </body>
