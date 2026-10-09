@@ -49,12 +49,11 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- **Brick Lodge is now a separate repository** (https://github.com/Kaveh-Mousavand/brick-lodge,
-  published at https://kaveh-mousavand.github.io/brick-lodge/). The "Brick Lodge" tab of this
-  site now shows a link to it, followed by the "My brick-trajectory" paragraph.
-- `open-conjectures.html` and `open-questions.html` have moved to that repository and are
-  **no longer part of this site** — delete them from this repo (after the new repo is live).
-- `brick-lodge.html` was rewritten accordingly; its old pop-up script was removed.
+- New **CV** and **Research statement** (October 2026) replace the old PDFs: `assets/docs/cv.pdf`
+  and `assets/docs/research-statement.pdf` (same filenames, so all links keep working).
+- Preprint renamed to "Brick-splitting torsion pairs and left modularity" (arXiv:2506.13602).
+- IMPRINT workshop now links to its OIST website, matching the other events.
+- The Brick Lodge repository needs no change: it links to the PDFs above.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set
