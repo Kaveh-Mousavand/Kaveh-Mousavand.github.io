@@ -49,11 +49,10 @@ See "Replace the files" below.
   ```
 
 ### What's new in this update
-- New **CV** and **Research statement** (October 2026) replace the old PDFs: `assets/docs/cv.pdf`
-  and `assets/docs/research-statement.pdf` (same filenames, so all links keep working).
-- Preprint renamed to "Brick-splitting torsion pairs and left modularity" (arXiv:2506.13602).
-- IMPRINT workshop now links to its OIST website, matching the other events.
-- The Brick Lodge repository needs no change: it links to the PDFs above.
+- **Brick Lodge tab:** the "The Brick Lodge repository" box is now light green. Its main button reads
+  **Enter the Brick Lodge** (bold, persimmon-brick background), and the "View on GitHub" button was
+  restyled (white) so both stay clearly visible on the green. Only `brick-lodge.html`,
+  `css/style.css` and `README.md` changed.
 
 3. **Enable Pages.**
    In the repo, go to **Settings → Pages**. Under "Build and deployment", set

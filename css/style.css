@@ -564,3 +564,45 @@ footer.site-footer {
     gap: 14px;
   }
 }
+
+/* ---------- Brick Lodge entry box (brick-lodge.html) ---------- */
+.card.card-lodge {
+  background: #DFF1D8;              /* light green */
+  border: 1px solid #86B87A;
+  padding: 24px 26px;
+}
+.card-lodge .section-label {
+  font-size: 1.15rem;
+  color: #1B2A18;
+  margin-bottom: 12px;
+}
+.card-lodge p { color: #202325; font-size: 1rem; line-height: 1.65; }
+.card-lodge .btn {
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+.card-lodge .btn:focus-visible { outline: 3px solid #223140; outline-offset: 2px; }
+/* primary button: persimmon brick, bold white text (contrast 4.7:1) */
+.card-lodge .btn-enter {
+  background: #C94A1B;
+  border-color: #C94A1B;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.card-lodge .btn-enter:hover,
+.card-lodge .btn-enter:focus-visible {
+  background: #A63A12;
+  border-color: #A63A12;
+  color: #FFFFFF;
+}
+/* secondary button: white, so it stays visible on the green */
+.card-lodge .btn-github {
+  background: #FFFFFF;
+  border-color: var(--slate);
+  color: var(--slate-deep);
+}
+.card-lodge .btn-github:hover {
+  background: var(--slate);
+  color: #FFFFFF;
+}
